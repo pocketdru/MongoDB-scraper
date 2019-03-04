@@ -1,0 +1,46 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2>Articles Added!</h2>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Mongo Scraper</h1>
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <button type="button" class="btn btn-primary" id="home">Home</button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btn-secondary" id="saved">Saved Articles</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="saved-articles">
+    <div id="articless">
+        {{#each dbSaved}}
+        <div class="article-body" id="{{_id}}">
+            <h4 data-id="{{_id}}" id="comment">{{title}}</h4>
+            <p data-id="{{_id}}" id="comment">{{body}}</p>
+            <a href="{{link}}">Read more</a>
+            <button id="delete">Delete Article</button>
+        </div>
+        {{/each}}
+    </div>
+    <div id="notes"></div>
+</div>
