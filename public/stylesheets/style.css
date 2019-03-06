@@ -13,7 +13,8 @@ body {
   background-color: rgba(240, 248, 255, 0.5);
 }
 
-#wrapper {
+#wrapper, #saved-articles {
+  display: flex;
   width: 960px;
   margin-left: auto;
   margin-right: auto;
@@ -56,8 +57,12 @@ body {
 .article-body a {
   color: black;
   background-color: rgba(240, 248, 255, 0.8);
+}
+
+.article-body a, .article-body button {
   margin-right: 60px;
 }
+
 
 #notes {
   width: 30%;
