@@ -29,7 +29,7 @@ body {
 }
 
 #articles {
-  display: inline-block;
+  display: none;
   overflow: auto;
   width: 90%;
   height: 700px;
